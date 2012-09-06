@@ -5,3 +5,8 @@ Silverlight demo to show how to use silverlight.
 ==Contact Me
 
 email: kiwi.swhite.coder@gmail.com
+
+csdn: kiwi_coder
+
+mode-check-demo:
+http://blog.csdn.net/kiwi_coder/article/details/7949019
