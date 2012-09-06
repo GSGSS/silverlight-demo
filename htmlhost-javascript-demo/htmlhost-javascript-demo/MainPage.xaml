@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="htmlhost_javascript_demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:divtools="clr-namespace:Divelements.SilverlightTools;assembly=Divelements.SilverlightTools"
+             mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <Button Content="Ask Html Say Hello" Width="300" Click="SayHello"></Button>
+        <divtools:HtmlHost x:Name="htmlHost" SourceUri="hello.html" Width="500" Height="500"></divtools:HtmlHost>
+    </StackPanel>
+</UserControl>
