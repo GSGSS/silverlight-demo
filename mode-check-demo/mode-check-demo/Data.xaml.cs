@@ -22,9 +22,12 @@ namespace mode_check_demo
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            var client = new MyDataServiceSoapClient();
-            client.GetDataCompleted += (s, args) => displayBox.Text = args.Result;
-            client.GetDataAsync();
+            if (!System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
+            {
+                var client = new MyDataServiceSoapClient();
+                client.GetDataCompleted += (s, args) => displayBox.Text = args.Result;
+                client.GetDataAsync();
+            }
         }
     }
 }
