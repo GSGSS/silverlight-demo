@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="MyDataServiceSoap" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1623/MyDataService.asmx"
+                binding="basicHttpBinding" bindingConfiguration="MyDataServiceSoap"
+                contract="MyDataService.MyDataServiceSoap" name="MyDataServiceSoap" />
+        </client>
+    </system.serviceModel>
+</configuration>
