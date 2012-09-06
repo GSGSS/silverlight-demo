@@ -8,6 +8,7 @@
     d:DesignHeight="300" d:DesignWidth="400">
 
     <StackPanel x:Name="LayoutRoot" Background="White">
+        <Button Content="Ask Html Say Hello" Width="300" Click="SayHello"></Button>
         <divtools:HtmlHost x:Name="htmlHost" SourceUri="hello.html" Width="500" Height="500"></divtools:HtmlHost>
     </StackPanel>
 </UserControl>

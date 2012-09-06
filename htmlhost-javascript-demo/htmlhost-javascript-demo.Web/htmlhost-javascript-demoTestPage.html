@@ -21,6 +21,11 @@
         </style>
         <script type="text/javascript" src="Silverlight.js"> </script>
         <script type="text/javascript">
+            function askHtmlSayHello() {
+                window.frames[window.frames.length-1].sayHello();
+            }
+        </script>
+        <script type="text/javascript">
             function onSilverlightError(sender, args) {
                 var appSource = "";
                 if (sender != null && sender != 0) {
