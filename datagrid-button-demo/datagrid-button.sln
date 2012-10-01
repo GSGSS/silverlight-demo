@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datagrid-button", "datagrid-button\datagrid-button.csproj", "{E0223EC4-6870-466E-A77F-014FF39E7EE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datagrid-button.Web", "datagrid-button.Web\datagrid-button.Web.csproj", "{A068C9CA-3B11-44F3-892C-45B47499D8A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0223EC4-6870-466E-A77F-014FF39E7EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0223EC4-6870-466E-A77F-014FF39E7EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0223EC4-6870-466E-A77F-014FF39E7EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0223EC4-6870-466E-A77F-014FF39E7EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A068C9CA-3B11-44F3-892C-45B47499D8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A068C9CA-3B11-44F3-892C-45B47499D8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A068C9CA-3B11-44F3-892C-45B47499D8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A068C9CA-3B11-44F3-892C-45B47499D8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
