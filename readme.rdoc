@@ -9,4 +9,10 @@ email: kiwi.swhite.coder@gmail.com
 csdn: kiwi_coder
 
 mode-check-demo:
-http://blog.csdn.net/kiwi_coder/article/details/7949019
+http://blog.csdn.net/kiwi_coder/article/details/7949019 <br>
+htmlhost-javascript-demo:
+http://blog.csdn.net/kiwi_coder/article/details/7952384 <br>
+datagrid-button-demo:
+http://blog.csdn.net/kiwi_coder/article/details/8035395 <br>
+autocomplete-custom-searchmode-demo:
+http://blog.csdn.net/kiwi_coder/article/details/8065034 <br>
