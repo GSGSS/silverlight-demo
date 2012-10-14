@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="autocomplete_custom_searchmode_demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <sdk:AutoCompleteBox Height="28" HorizontalAlignment="Center" x:Name="wordAutoCompleteBox" VerticalAlignment="Center" Width="200" Populating="WordAutoCompleteBox_OnPopulating">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="200">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock HorizontalAlignment="Left" Foreground="Gray" Text="{Binding FirstName}" Grid.Column="0" />
+                        <TextBlock HorizontalAlignment="Left" Foreground="Gray" Text="{Binding SecondName}" Grid.Column="1" />
+                    </Grid>
+                </DataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+    </StackPanel>
+</UserControl>
