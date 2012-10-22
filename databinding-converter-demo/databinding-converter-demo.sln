@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "databinding-converter-demo", "databinding-converter-demo\databinding-converter-demo.csproj", "{7CCDCC90-F2CE-4A4D-8D63-458F69ACB27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "databinding-converter-demo.Web", "databinding-converter-demo.Web\databinding-converter-demo.Web.csproj", "{C54F0006-F031-4131-A5D4-F61884F3C364}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CCDCC90-F2CE-4A4D-8D63-458F69ACB27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCDCC90-F2CE-4A4D-8D63-458F69ACB27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCDCC90-F2CE-4A4D-8D63-458F69ACB27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCDCC90-F2CE-4A4D-8D63-458F69ACB27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54F0006-F031-4131-A5D4-F61884F3C364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54F0006-F031-4131-A5D4-F61884F3C364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54F0006-F031-4131-A5D4-F61884F3C364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54F0006-F031-4131-A5D4-F61884F3C364}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
