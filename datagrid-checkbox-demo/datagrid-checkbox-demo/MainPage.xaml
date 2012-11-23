@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="datagrid_checkbox_demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <StackPanel x:Name="LayoutRoot" Background="White">
+        <sdk:DataGrid Name="kiwiDataGrid" AutoGenerateColumns="False" Height="200" Width="250">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Name="selectCheckBox" Checked="SelectCheckBox_OnChecked" Unchecked="SelectCheckBox_OnUnchecked"
+                                      VerticalAlignment="Center" HorizontalAlignment="Center"></CheckBox>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding Name}" Width="100"/>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Button Width="250" Height="30" Content="Show Selected Kiwi" Click="SelectButton_OnClick" Margin="0,5,0,0"></Button>
+    </StackPanel>
+</UserControl>
