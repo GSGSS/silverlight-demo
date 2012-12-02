@@ -1,0 +1,8 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="binding_to_relative_source.App"
+             >
+    <Application.Resources>
+        
+    </Application.Resources>
+</Application>
