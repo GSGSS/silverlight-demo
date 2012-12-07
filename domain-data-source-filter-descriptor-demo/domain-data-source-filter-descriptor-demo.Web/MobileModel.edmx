@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MobileModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MobileModelStoreContainer">
+          <EntitySet Name="SMS" EntityType="MobileModel.Store.SMS" store:Type="Tables" store:Schema="dbo" store:Name="SMS">
+            <DefiningQuery>SELECT 
+      [SMS].[id] AS [id], 
+      [SMS].[time] AS [time], 
+      [SMS].[message] AS [message]
+      FROM [dbo].[SMS] AS [SMS]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Mobile.dbo.SMS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="SMS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="time" Type="datetime" />
+          <Property Name="message" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="MobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SMS" EntityType="MobileModel.SM" />
+        </EntityContainer>
+        <EntityType Name="SM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="time" Type="DateTime" />
+          <Property Name="message" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileModelStoreContainer" CdmEntityContainer="MobileEntities">
+          <EntitySetMapping Name="SMS"><EntityTypeMapping TypeName="MobileModel.SM"><MappingFragment StoreEntitySet="SMS">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="time" ColumnName="time" />
+            <ScalarProperty Name="message" ColumnName="message" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="MobileModel">
+        <EntityTypeShape EntityType="MobileModel.SM" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5879931640625" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

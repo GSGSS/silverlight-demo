@@ -8,7 +8,19 @@
     d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
     <Grid x:Name="LayoutRoot" Background="White">
-        <sdk:DataGrid ItemsSource="{Binding Data, ElementName=guardDataSource}" AutoGenerateColumns="True" Height="184" HorizontalAlignment="Left" Margin="12,54,0,0" Name="guardDataGrid" VerticalAlignment="Top" Width="164" />
+        <sdk:DataGrid ItemsSource="{Binding Data, ElementName=guardDataSource}" AutoGenerateColumns="False" Height="184" HorizontalAlignment="Left" Margin="12,54,0,0" Name="guardDataGrid" VerticalAlignment="Top" Width="164">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn Binding="{Binding name}" Header="name" IsReadOnly="True"/>
+                <sdk:DataGridTextColumn Binding="{Binding status}" Header="status" IsReadOnly="True"/>
+                <sdk:DataGridTemplateColumn Header="Register" IsReadOnly="True">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Register" IsEnabled="{Binding CanRegister}"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
         <sdk:Label Content="Guard" Height="28" HorizontalAlignment="Center" Margin="29,20,251,0" VerticalAlignment="Top" Width="120" />
         <sdk:DataGrid ItemsSource="{Binding Data, ElementName=officerDataSource}" Name="officerDataGrid" 
                       AutoGenerateColumns="False"  Height="184" HorizontalAlignment="Left" Margin="208,54,0,0" VerticalAlignment="Top" Width="164">
@@ -27,7 +39,7 @@
         <sdk:Label Content="Officer" Height="28" HorizontalAlignment="Center" Margin="227,20,53,0" VerticalAlignment="Top" Width="120" />
         <TextBox Height="28" HorizontalAlignment="Left" Margin="12,244,0,0" Name="nameTextBox" VerticalAlignment="Top" Width="120" />
         <Button Content="Add" Height="28" HorizontalAlignment="Left" Margin="138,244,0,0" Name="addButton" VerticalAlignment="Top" Width="38" Click="addButton_Click" />
-        <riaControls:DomainDataSource Name="guardDataSource" LoadingData="GuardDataSource_OnLoadingData"
+        <riaControls:DomainDataSource Name="guardDataSource" LoadingData="GuardDataSource_OnLoadingData" LoadedData="GuardDataSource_OnLoadedData"
                                       AutoLoad="True" LoadSize="10" QueryName="GetRegisters">
             <riaControls:DomainDataSource.DomainContext>
                 <server:RegisterDomainContext/>

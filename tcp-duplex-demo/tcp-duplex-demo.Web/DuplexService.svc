@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="tcp_duplex_demo.Web.OrderService" CodeBehind="OrderService.svc.cs" %>

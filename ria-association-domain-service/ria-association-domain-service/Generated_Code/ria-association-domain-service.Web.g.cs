@@ -71,6 +71,7 @@ namespace ria_association_domain_service.Web
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
     using System.Runtime.Serialization;
     using System.ServiceModel;
@@ -124,6 +125,7 @@ namespace ria_association_domain_service.Web
         /// <summary>
         /// Gets or sets the 'Id' value.
         /// </summary>
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DataMember()]
         [Editable(false, AllowInitialValue=true)]
         [Key()]
@@ -549,6 +551,7 @@ namespace ria_association_domain_service.Web
         /// <summary>
         /// Gets or sets the 'id' value.
         /// </summary>
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [DataMember()]
         [Editable(false, AllowInitialValue=true)]
         [Key()]

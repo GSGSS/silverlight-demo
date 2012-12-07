@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.ServiceModel.DomainServices.Client;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using domain_service_duplex_by_auto_refresh_demo.Web;
 
 namespace domain_service_duplex_by_auto_refresh_demo
@@ -26,16 +18,16 @@ namespace domain_service_duplex_by_auto_refresh_demo
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            Register register = new Register {name = nameTextBox.Text, status = "Wait"};
-            RegisterDomainContext context = guardDataSource.DomainContext as RegisterDomainContext;
+            var register = new Register {name = nameTextBox.Text, status = "Wait"};
+            var context = guardDataSource.DomainContext as RegisterDomainContext;
             context.Registers.Add(register);
             guardDataSource.SubmitChanges();
         }
 
         private void AcceptButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            Register register = button.DataContext as Register;
+            var button = sender as Button;
+            var register = button.DataContext as Register;
             register.status = "Accept";
             officerDataSource.SubmitChanges();
         }
@@ -44,5 +36,25 @@ namespace domain_service_duplex_by_auto_refresh_demo
         {
             e.LoadBehavior = LoadBehavior.MergeIntoCurrent;
         }
+
+        private void GuardDataSource_OnLoadedData(object sender, LoadedDataEventArgs e)
+        {
+            foreach (var entity in e.Entities)
+            {
+                Register register = entity as Register;
+            }
+        }
+    }
+}
+
+namespace domain_service_duplex_by_auto_refresh_demo.Web
+{
+    public partial class Register
+    {
+        partial void OnstatusChanged()
+        {
+            RaisePropertyChanged("CanRegister");
+        }
+        public bool CanRegister { get { return status == "Accept"; } }
     }
 }

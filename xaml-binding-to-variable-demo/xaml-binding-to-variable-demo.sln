@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xaml-binding-to-variable-demo", "xaml-binding-to-variable-demo\xaml-binding-to-variable-demo.csproj", "{1B20FAF7-BE1A-4F54-8C2F-C3467D1B1916}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312} = {6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xaml-binding-to-variable-demo.Web", "xaml-binding-to-variable-demo.Web\xaml-binding-to-variable-demo.Web.csproj", "{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B20FAF7-BE1A-4F54-8C2F-C3467D1B1916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B20FAF7-BE1A-4F54-8C2F-C3467D1B1916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B20FAF7-BE1A-4F54-8C2F-C3467D1B1916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B20FAF7-BE1A-4F54-8C2F-C3467D1B1916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6007DB33-5DAD-4F4F-B0BF-5F3295DB8312}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

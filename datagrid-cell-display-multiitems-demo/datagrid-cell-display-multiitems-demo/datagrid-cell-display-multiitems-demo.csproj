@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E839622A-E379-4E20-BF20-B30312CEC7C0}</ProjectGuid>
+    <ProjectGuid>{5CEB50B0-56E5-4BF7-AC51-25F1D0B671BD}</ProjectGuid>
     <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ria_association_domain_service</RootNamespace>
-    <AssemblyName>ria-association-domain-service</AssemblyName>
+    <RootNamespace>datagrid_cell_display_multiitems_demo</RootNamespace>
+    <AssemblyName>datagrid-cell-display-multiitems-demo</AssemblyName>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
@@ -19,18 +19,18 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>ria-association-domain-service.xap</XapFilename>
+    <XapFilename>datagrid-cell-display-multiitems-demo.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>ria_association_domain_service.App</SilverlightAppEntry>
-    <TestPageFileName>ria_association_domain_serviceTestPage.html</TestPageFileName>
+    <SilverlightAppEntry>datagrid_cell_display_multiitems_demo.App</SilverlightAppEntry>
+    <TestPageFileName>datagrid_cell_display_multiitems_demoTestPage.html</TestPageFileName>
     <CreateTestPage>true</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
     <EnableOutOfBrowser>false</EnableOutOfBrowser>
     <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
     <UsePlatformExtensions>false</UsePlatformExtensions>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <LinkedServerProject>..\ria-association-domain-service.Web\ria-association-domain-service.Web.csproj</LinkedServerProject>
-    <TargetFrameworkProfile />
+    <LinkedServerProject>
+    </LinkedServerProject>
   </PropertyGroup>
   <!-- This property group is only here to support building this project using the 
        MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
@@ -61,40 +61,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
-    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.ServiceModel.Web.Extensions, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ServiceModel.Web.Extensions.dll</HintPath>
-    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
-    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Data.DataForm.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
-    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.Input.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Controls.DomainServices, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
-    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Data.dll</HintPath>
-    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
@@ -106,9 +80,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecordForm.xaml.cs">
-      <DependentUpon>RecordForm.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -116,10 +87,6 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RecordForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

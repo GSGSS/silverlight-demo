@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain-data-source-filter-descriptor-demo", "domain-data-source-filter-descriptor-demo\domain-data-source-filter-descriptor-demo.csproj", "{C5E3B7E0-B2A6-46AA-82AE-077CA9FD8DB7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C} = {CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain-data-source-filter-descriptor-demo.Web", "domain-data-source-filter-descriptor-demo.Web\domain-data-source-filter-descriptor-demo.Web.csproj", "{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5E3B7E0-B2A6-46AA-82AE-077CA9FD8DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E3B7E0-B2A6-46AA-82AE-077CA9FD8DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E3B7E0-B2A6-46AA-82AE-077CA9FD8DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E3B7E0-B2A6-46AA-82AE-077CA9FD8DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDFA1ED-166F-4A54-A4C1-56E52F43F03C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

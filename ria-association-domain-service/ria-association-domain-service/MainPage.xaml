@@ -3,22 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ds="clr-namespace:ria_association_domain_service.Web" 
-             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="600"
+             mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="600"
              xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices">
 
-    <Grid x:Name="LayoutRoot" Background="White">
-        <riaControls:DomainDataSource Name="libraryDataSource" LoadSize="20" AutoLoad="True" QueryName="GetRecords">
+    <StackPanel x:Name="LayoutRoot" Background="White" Orientation="Vertical" HorizontalAlignment="Center">
+        <riaControls:DomainDataSource Name="libraryDataSource" LoadSize="20" AutoLoad="True" QueryName="GetRecords" SubmittedChanges="LibraryDataSource_OnSubmittedChanges">
+            <riaControls:DomainDataSource.FilterDescriptors>
+                <riaControls:FilterDescriptor Operator="IsEqualTo" Value="{Binding Path=SelectedItem, ElementName=idComboBox}"
+                                              IgnoredValue="" PropertyPath="Book.Id">
+                </riaControls:FilterDescriptor>
+            </riaControls:DomainDataSource.FilterDescriptors>
             <riaControls:DomainDataSource.DomainContext>
                 <ds:LibraryContext/>
             </riaControls:DomainDataSource.DomainContext>
         </riaControls:DomainDataSource>
-        <sdk:DataGrid AutoGenerateColumns="False" Width="600" Height="300" ItemsSource="{Binding Path=Data, ElementName=libraryDataSource}">
+        <ComboBox Height="23" Name="idComboBox" Width="120" HorizontalAlignment="Left" SelectionChanged="IdComboBox_OnSelectionChanged" >
+<!--            <ComboBox.Items>-->
+<!--                <ComboBoxItem IsSelected="True">1</ComboBoxItem>-->
+<!--                <ComboBoxItem>2</ComboBoxItem>-->
+<!--                <ComboBoxItem>3</ComboBoxItem>-->
+<!--            </ComboBox.Items>-->
+        </ComboBox>
+        <TextBox Height="23" Name="idTextBox" Width="120" HorizontalAlignment="Left" Text="{Binding Path=SelectedValue, ElementName=idComboBox}"/>
+        <sdk:DataGrid AutoGenerateColumns="False" IsReadOnly="True" Width="600"  Height="230" ItemsSource="{Binding Path=Data, ElementName=libraryDataSource}" Margin="0,0,0,0">
             <sdk:DataGrid.Columns>
                 <sdk:DataGridTextColumn Binding="{Binding Book.Name}" Header="书名"/>
                 <sdk:DataGridTextColumn Binding="{Binding Book.Isbn}" Header="ISBN"/>
                 <sdk:DataGridTextColumn Binding="{Binding startTime}" Header="开始时间"/>
                 <sdk:DataGridTextColumn Binding="{Binding endTime}" Header="结束时间"/>
+                <sdk:DataGridTemplateColumn Header="修改">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="修改" Click="ModifyButton_OnClick"/>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
             </sdk:DataGrid.Columns>
         </sdk:DataGrid>
-    </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button Name="AddRecordButton" Width="120" Height="30" Click="AddRecordButton_OnClick" Content="添加记录"/>
+        </StackPanel>
+    </StackPanel>
 </UserControl>
