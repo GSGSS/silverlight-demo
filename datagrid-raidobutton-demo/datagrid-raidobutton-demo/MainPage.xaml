@@ -1,0 +1,31 @@
+﻿<UserControl xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices"  x:Class="datagrid_raidobutton_demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:web="clr-namespace:datagrid_raidobutton_demo.Web"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+
+    <StackPanel x:Name="LayoutRoot" Background="White" Orientation="Vertical">
+        <sdk:DataGrid ItemsSource="{Binding Data, ElementName=bookDataSource}" Margin="0,50,0,0"
+            AutoGenerateColumns="False" Height="100" HorizontalAlignment="Center" Name="bookDataGrid" VerticalAlignment="Top" Width="300">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <RadioButton IsChecked="{Binding IsSelected, Mode=TwoWay}"></RadioButton>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding Name}"></sdk:DataGridTextColumn>
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:DataPager PageSize="2" Source="{Binding Data, ElementName=bookDataSource}" Width="300"></sdk:DataPager>
+        <riaControls:DomainDataSource Name="bookDataSource" QueryName="GetBooks" AutoLoad="True" PageSize="2" LoadSize="10">
+            <riaControls:DomainDataSource.DomainContext>
+                <web:LibraryDomainContext></web:LibraryDomainContext>
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+    </StackPanel>
+</UserControl>
