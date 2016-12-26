@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "htmlhost-javascript-demo", "htmlhost-javascript-demo\htmlhost-javascript-demo.csproj", "{9C867CC0-728D-44F7-A760-AADD9025470C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "htmlhost-javascript-demo.Web", "htmlhost-javascript-demo.Web\htmlhost-javascript-demo.Web.csproj", "{50714551-39C9-4003-B897-F0884E9A59EA}"
